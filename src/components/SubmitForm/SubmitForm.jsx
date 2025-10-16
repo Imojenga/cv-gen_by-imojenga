@@ -8,6 +8,10 @@ const ValidSchema = Yup.object().shape({
     .min(3, 'Too short')
     .max(50, 'Too long')
     .required('Required'),
+  position: Yup.string()
+    .min(2, 'Too short')
+    .max(50, 'Too long')
+    .required('Required'),
   email: Yup.string().email('Must be a valid email').required('Required'),
   phone: Yup.string()
     .phone('Must be a valid phone number')
@@ -31,6 +35,7 @@ const ValidSchema = Yup.object().shape({
 
 const initialValues = {
   username: '',
+  position: '',
   email: '',
   phone: '',
   country: '',
@@ -63,6 +68,16 @@ export default function SubmitForm() {
             id="username"
           />
           <ErrorMessage className={css.error} name="username" component="p" />
+        </div>
+        <div className={css.wrp}>
+          <label htmlFor="position">Position:</label>
+          <Field
+            className={css.input}
+            type="text"
+            name="position"
+            id="position"
+          />
+          <ErrorMessage className={css.error} name="position" component="p" />
         </div>
         <div className={css.wrp}>
           <p>Contact info:</p>
