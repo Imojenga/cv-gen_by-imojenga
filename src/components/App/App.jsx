@@ -1,4 +1,4 @@
-import SubmitForm from './components/SubmitForm/SubmitForm';
+import SubmitForm from '../SubmitForm/SubmitForm';
 import css from './App.module.css';
 
 export default function App() {
