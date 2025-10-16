@@ -24,6 +24,7 @@ button {
   border: 1px solid var(--dark);
   border-radius: 6px;
   resize: none;
+  font-family: inherit;
 }
 
 button {
