@@ -16,17 +16,9 @@ const ValidSchema = Yup.object().shape({
   phone: Yup.string()
     .phone('Must be a valid phone number')
     .required('Required'),
-  country: Yup.string()
-    .min(2, 'Too short')
-    .max(56, 'Too long')
-    .required('Required'),
-  region: Yup.string()
-    .min(2, 'Too short')
-    .max(100, 'Too long')
-    .required('Required'),
   city: Yup.string()
-    .min(1, 'Too short')
-    .max(168, 'Too long')
+    .min(3, 'Too short')
+    .max(100, 'Too long')
     .required('Required'),
   exp: Yup.string(),
   edu: Yup.string(),
@@ -38,8 +30,6 @@ const initialValues = {
   position: '',
   email: '',
   phone: '',
-  country: '',
-  region: '',
   city: '',
   exp: '',
   edu: '',
@@ -100,34 +90,9 @@ export default function SubmitForm() {
           </div>
         </div>
         <div className={css.wrp}>
-          <p>Address:</p>
-          <div className={css.box}>
-            <label className={css.custom} htmlFor="country">
-              Country:
-            </label>
-            <Field
-              className={css.input}
-              type="text"
-              name="country"
-              id="country"
-            />
-            <ErrorMessage className={css.error} name="country" component="p" />
-            <label className={css.custom} htmlFor="region">
-              Region:
-            </label>
-            <Field
-              className={css.input}
-              type="text"
-              name="region"
-              id="region"
-            />
-            <ErrorMessage className={css.error} name="region" component="p" />
-            <label className={css.custom} htmlFor="city">
-              City:
-            </label>
-            <Field className={css.input} type="text" name="city" id="city" />
-            <ErrorMessage className={css.error} name="city" component="p" />
-          </div>
+          <label htmlFor="city">Address (city, region, country):</label>
+          <Field className={css.input} type="text" name="city" id="city" />
+          <ErrorMessage className={css.error} name="city" component="p" />
         </div>
         <div className={css.wrp}>
           <label htmlFor="exp">Work experience and skills:</label>
