@@ -1,0 +1,31 @@
+.container {
+  margin: 0 auto;
+  padding: 120px;
+}
+
+.wrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.svg {
+  fill: var(--dark);
+}
+
+.title {
+  font-size: 48px;
+  color: darkgray;
+}
+
+.accent {
+  font-style: italic;
+  color: var(--main);
+}
+
+.text {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
