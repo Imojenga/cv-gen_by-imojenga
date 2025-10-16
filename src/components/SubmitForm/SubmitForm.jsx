@@ -25,12 +25,7 @@ const ValidSchema = Yup.object().shape({
     .max(168, 'Too long')
     .required('Required'),
   exp: Yup.string(),
-  start: Yup.date(),
-  end: Yup.date().min(
-    Yup.ref('startDate'),
-    'End date cannot be earlier than start date'
-  ),
-  uni: Yup.string(),
+  edu: Yup.string(),
   add: Yup.string(),
 });
 
@@ -42,9 +37,7 @@ const initialValues = {
   region: '',
   city: '',
   exp: '',
-  start: '',
-  end: '',
-  uni: '',
+  edu: '',
   add: '',
 };
 
