@@ -1,10 +1,14 @@
 import axios from 'axios';
 
 export const fetchCv = async values => {
-  return await axios.post('http://localhost:3000/cvs', values, {
-    responseType: 'blob',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  return await axios.post(
+    'https://cv-gen-by-imojenga-back.onrender.com/cvs',
+    values,
+    {
+      responseType: 'blob',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  );
 };

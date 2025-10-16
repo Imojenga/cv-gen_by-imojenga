@@ -1,6 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import 'yup-phone';
 import css from './SubmitForm.module.css';
 import { fetchCv } from '../../api';
 
