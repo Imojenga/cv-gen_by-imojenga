@@ -133,24 +133,15 @@ export default function SubmitForm() {
           <ErrorMessage className={css.error} name="exp" component="p" />
         </div>
         <div className={css.wrp}>
-          <p>Education:</p>
-          <div className={css.box}>
-            <label className={css.custom} htmlFor="start">
-              From:
-            </label>
-            <Field className={css.input} type="date" name="start" id="start" />
-            <ErrorMessage className={css.error} name="start" component="p" />
-            <label className={css.custom} htmlFor="end">
-              To:
-            </label>
-            <Field className={css.input} type="date" name="end" id="end" />
-            <ErrorMessage className={css.error} name="end" component="p" />
-            <label className={css.custom} htmlFor="uni">
-              University:
-            </label>
-            <Field className={css.input} type="uni" name="uni" id="uni" />
-            <ErrorMessage className={css.error} name="uni" component="p" />
-          </div>
+          <label htmlFor="edu">Education:</label>
+          <Field
+            className={css.input}
+            as="textarea"
+            name="edu"
+            id="edu"
+            rows="6"
+          />
+          <ErrorMessage className={css.error} name="edu" component="p" />
         </div>
         <div className={css.wrp}>
           <label htmlFor="add">Additional info:</label>
