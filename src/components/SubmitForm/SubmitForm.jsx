@@ -13,7 +13,9 @@ const ValidSchema = Yup.object().shape({
     .max(50, 'Too long')
     .required('Required'),
   email: Yup.string().email('Must be a valid email').required('Required'),
-  phone: Yup.string().required('Required'),
+  phone: Yup.string()
+    .matches(/^[0-9()+ -]*$/, 'Only digits, spaces, +, - and () are allowed')
+    .required('Required'),
   city: Yup.string()
     .min(3, 'Too short')
     .max(100, 'Too long')
@@ -107,9 +109,10 @@ export default function SubmitForm() {
               </label>
               <Field
                 className={css.input}
-                type="number"
+                type="tel"
                 name="phone"
                 id="phone"
+                pattern="^[0-9()+\s-]*$"
               />
               <ErrorMessage className={css.error} name="phone" component="p" />
             </div>
