@@ -29,15 +29,15 @@ The backend is hosted separately and handles .docx generation.
 
 2. Install dependencies:
 
-npm install
+- npm install
 
 3. Run the project locally:
 
-npm run dev
+- npm run dev
 
 4. Open in your browser:
 
-http://localhost:5173
+- http://localhost:5173
 
 ## Usage:
 
