@@ -107,13 +107,7 @@ export default function SubmitForm() {
               <label className={css.custom} htmlFor="phone">
                 Phone:
               </label>
-              <Field
-                className={css.input}
-                type="tel"
-                name="phone"
-                id="phone"
-                pattern="^[0-9()+\s-]*$"
-              />
+              <Field className={css.input} type="tel" name="phone" id="phone" />
               <ErrorMessage className={css.error} name="phone" component="p" />
             </div>
           </div>
