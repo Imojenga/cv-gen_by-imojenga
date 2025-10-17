@@ -72,7 +72,7 @@ export default function SubmitForm() {
       {({ isSubmitting }) => (
         <Form className={css.form}>
           <div className={css.wrp}>
-            <label htmlFor="username">Full name:</label>
+            <label htmlFor="username">Full name: *</label>
             <Field
               className={css.input}
               type="text"
@@ -82,7 +82,7 @@ export default function SubmitForm() {
             <ErrorMessage className={css.error} name="username" component="p" />
           </div>
           <div className={css.wrp}>
-            <label htmlFor="position">Position:</label>
+            <label htmlFor="position">Position: *</label>
             <Field
               className={css.input}
               type="text"
@@ -92,10 +92,10 @@ export default function SubmitForm() {
             <ErrorMessage className={css.error} name="position" component="p" />
           </div>
           <div className={css.wrp}>
-            <p>Contact info:</p>
+            <p>Contact info: *</p>
             <div className={css.box}>
               <label className={css.custom} htmlFor="email">
-                Email:
+                Email: *
               </label>
               <Field
                 className={css.input}
@@ -105,14 +105,14 @@ export default function SubmitForm() {
               />
               <ErrorMessage className={css.error} name="email" component="p" />
               <label className={css.custom} htmlFor="phone">
-                Phone:
+                Phone: *
               </label>
               <Field className={css.input} type="tel" name="phone" id="phone" />
               <ErrorMessage className={css.error} name="phone" component="p" />
             </div>
           </div>
           <div className={css.wrp}>
-            <label htmlFor="city">Address (city, region, country):</label>
+            <label htmlFor="city">Address (city, region, country): *</label>
             <Field className={css.input} type="text" name="city" id="city" />
             <ErrorMessage className={css.error} name="city" component="p" />
           </div>
